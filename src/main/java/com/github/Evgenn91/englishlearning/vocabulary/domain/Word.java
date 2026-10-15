@@ -1,7 +1,6 @@
 package com.github.Evgenn91.englishlearning.vocabulary.domain;
 
 import java.util.List;
-import java.util.UUID;
 
 public class Word {
     private long frequencyCount;
@@ -11,20 +10,43 @@ public class Word {
     private String word;
     private List<WordMeaning> meanings;
 
-    public Word(UUID uuid, String text, int frequencyRank) {
-        if (text == null || text.isBlank()) {
-            throw new IllegalArgumentException(
-                    "Word text cannot be empty"
-            );
-        }
-
-        if (frequencyRank < 1) {
-            throw new IllegalArgumentException(
-                    "Frequency rank must be positive"
-            );
-        }
-
-
+    public long getFrequencyCount() {
+        return frequencyCount;
     }
 
+    public void setFrequencyCount(long frequencyCount) {
+        this.frequencyCount = frequencyCount;
+    }
+
+    public String getMainPartOfSpeech() {
+        return mainPartOfSpeech;
+    }
+
+    public void setMainPartOfSpeech(String mainPartOfSpeech) {
+        this.mainPartOfSpeech = mainPartOfSpeech;
+    }
+
+    public List<PartOfSpeech> getPartsOfSpeech() {
+        return partsOfSpeech;
+    }
+
+    public void setPartsOfSpeech(List<PartOfSpeech> partsOfSpeech) {
+        this.partsOfSpeech = partsOfSpeech;
+    }
+
+    public String getWord() {
+        return word;
+    }
+
+    public void setWord(String word) {
+        this.word = word;
+    }
+
+    public List<WordMeaning> getMeanings() {
+        return meanings;
+    }
+
+    public void setMeanings(List<WordMeaning> meanings) {
+        this.meanings = meanings;
+    }
 }
