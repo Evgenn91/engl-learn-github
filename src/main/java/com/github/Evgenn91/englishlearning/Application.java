@@ -5,6 +5,8 @@ import com.github.Evgenn91.englishlearning.vocabulary.domain.Word;
 import org.apache.commons.csv.CSVFormat;
 import org.apache.commons.csv.CSVParser;
 import org.apache.commons.csv.CSVRecord;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import java.io.IOException;
 import java.io.Reader;
@@ -16,21 +18,10 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Locale;
 
+@SpringBootApplication
 public class Application {
     public static void main(String[] args) {
-        var loader = new WordDataLoader();
-        List<Word> words =  loader.getWords();
-        System.out.println("слов - " + words.size());
-
-        words.stream()
-                .limit(50)
-                .forEach(word -> System.out.println(
-                        word.getWord() + " | " +
-                                word.getFrequencyCount() + " | " +
-                                word.getMainPartOfSpeech() + " | " +
-                                word.getPartsOfSpeech()
-                ));
-
+        SpringApplication.run(Application.class, args);
     }
 }
 
