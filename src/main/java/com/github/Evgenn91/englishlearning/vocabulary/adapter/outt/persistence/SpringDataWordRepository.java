@@ -4,6 +4,6 @@ import org.springframework.data.repository.CrudRepository;
 
 import java.util.Optional;
 
-public interface SpringDataWordRepository extends CrudRepository<WordEntity, Long> {
+public interface SpringDataWordRepository /*extends CrudRepository<WordEntity, Long>*/ {
     Optional<WordEntity> findByWord(String word);
 }

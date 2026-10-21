@@ -2,11 +2,10 @@ package com.github.Evgenn91.englishlearning.vocabulary.application;
 
 import com.github.Evgenn91.englishlearning.vocabulary.domain.Word;
 import com.github.Evgenn91.englishlearning.vocabulary.port.outt.WordRepository;
-import org.springframework.stereotype.Service;
 
 import java.util.Optional;
 
-@Service
+//@Service
 public class FindWordUseCase {
     private final WordRepository wordRepository;
 

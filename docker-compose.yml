@@ -1,19 +1,16 @@
-version: "3.9"
-
 services:
-  minio:
-    image: minio/minio:latest
-    container_name: minio
-    command: server /data --console-address ":9001"
-    ports:
-      - "9000:9000"   # API
-      - "9001:9001"   # Web UI
+  postgres:
+    image: postgres:15
+    container_name: englishlearning-postgres
     environment:
-      MINIO_ROOT_USER: admin
-      MINIO_ROOT_PASSWORD: password
+      POSTGRES_DB: englishlearning
+      POSTGRES_USER: englishlearning
+      POSTGRES_PASSWORD: englishlearning
+    ports:
+      - "5433:5432"
     volumes:
-      - ./minio-data:/data
+      - englishlearning-data:/var/lib/postgresql/data
     restart: unless-stopped
 
 volumes:
-  minio_data:
+  englishlearning-data:

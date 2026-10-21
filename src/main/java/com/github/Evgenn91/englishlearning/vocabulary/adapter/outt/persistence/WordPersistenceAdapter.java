@@ -6,7 +6,7 @@ import org.springframework.stereotype.Repository;
 
 import java.util.Optional;
 
-@Repository
+//@Repository
 public class WordPersistenceAdapter implements WordRepository {
     private final SpringDataWordRepository springDataRepository;
     private final WordMapper wordMapper;
@@ -27,13 +27,14 @@ public class WordPersistenceAdapter implements WordRepository {
 
     @Override
     public Optional<Word> findById(String id) {
-        return springDataRepository.findById(Long.valueOf(id))
-                .map(wordMapper::toDomain);
+//        return springDataRepository.findById(Long.valueOf(id))
+//                .map(wordMapper::toDomain);
+        return Optional.empty();
     }
 
     @Override
     public void save(Word word) {
-        WordEntity entity = wordMapper.toEntity(word);
-        springDataRepository.save(entity);
+//        WordEntity entity = wordMapper.toEntity(word);
+//        springDataRepository.save(entity);
     }
 }
