@@ -4,11 +4,11 @@ import com.github.Evgenn91.englishlearning.vocabulary.domain.Word;
 
 public class WordMapper {
 
-    public Word toDomain(WordEntity entity) {
+    public Word toDomain(WordEntity1 entity) {
         return null;
     }
 
-    public WordEntity toEntity(Word word) {
+    public WordEntity1 toEntity(Word word) {
         return null;
     }
 }
