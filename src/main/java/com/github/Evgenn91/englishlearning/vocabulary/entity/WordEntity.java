@@ -1,4 +1,4 @@
-package com.github.Evgenn91.englishlearning.vocabulary;
+package com.github.Evgenn91.englishlearning.vocabulary.entity;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;

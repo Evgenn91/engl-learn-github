@@ -1,5 +1,6 @@
-package com.github.Evgenn91.englishlearning.vocabulary;
+package com.github.Evgenn91.englishlearning.vocabulary.service;
 
+import com.github.Evgenn91.englishlearning.vocabulary.service.WordImportService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;

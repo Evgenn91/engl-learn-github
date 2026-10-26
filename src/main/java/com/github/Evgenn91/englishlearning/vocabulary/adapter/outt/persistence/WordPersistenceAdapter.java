@@ -1,13 +1,7 @@
 package com.github.Evgenn91.englishlearning.vocabulary.adapter.outt.persistence;
 
-import com.github.Evgenn91.englishlearning.vocabulary.domain.Word;
-import com.github.Evgenn91.englishlearning.vocabulary.port.outt.WordRepository;
-import org.springframework.stereotype.Repository;
-
-import java.util.Optional;
-
 //@Repository
-public class WordPersistenceAdapter implements WordRepository {
+public class WordPersistenceAdapter /*implements WordRepository*/ {
     private final SpringDataWordRepository springDataRepository;
     private final WordMapper wordMapper;
 
@@ -19,22 +13,22 @@ public class WordPersistenceAdapter implements WordRepository {
         this.wordMapper = wordMapper;
     }
 
-    @Override
-    public Optional<Word> findByText(String text) {
-        return springDataRepository.findByWord(text)
-                .map(wordMapper::toDomain);
-    }
-
-    @Override
-    public Optional<Word> findById(String id) {
-//        return springDataRepository.findById(Long.valueOf(id))
+//    @Override
+//    public Optional<Word> findByText(String text) {
+//        return springDataRepository.findByWord(text)
 //                .map(wordMapper::toDomain);
-        return Optional.empty();
-    }
-
-    @Override
-    public void save(Word word) {
-//        WordEntity entity = wordMapper.toEntity(word);
-//        springDataRepository.save(entity);
-    }
+//    }
+//
+//    @Override
+//    public Optional<Word> findById(String id) {
+////        return springDataRepository.findById(Long.valueOf(id))
+////                .map(wordMapper::toDomain);
+//        return Optional.empty();
+//    }
+//
+//    @Override
+//    public void save(Word word) {
+////        WordEntity entity = wordMapper.toEntity(word);
+////        springDataRepository.save(entity);
+//    }
 }

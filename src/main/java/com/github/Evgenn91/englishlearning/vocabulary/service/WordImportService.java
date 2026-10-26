@@ -1,5 +1,7 @@
-package com.github.Evgenn91.englishlearning.vocabulary;
+package com.github.Evgenn91.englishlearning.vocabulary.service;
 
+import com.github.Evgenn91.englishlearning.vocabulary.entity.WordEntity;
+import com.github.Evgenn91.englishlearning.vocabulary.WordRepository;
 import lombok.RequiredArgsConstructor;
 import org.apache.commons.csv.CSVFormat;
 import org.apache.commons.csv.CSVParser;

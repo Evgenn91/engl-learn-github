@@ -1,4 +1,4 @@
-package com.github.Evgenn91.englishlearning.vocabulary;
+package com.github.Evgenn91.englishlearning.vocabulary.entity;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -7,14 +7,13 @@ import jakarta.persistence.Table;
 import lombok.Getter;
 import lombok.Setter;
 
-import java.time.LocalDate;
 import java.util.UUID;
 
 @Entity
-@Table(name = "progress_learn_word")
+@Table(name = "word_use_example")
 @Setter
 @Getter
-public class ProgressLearnWordEntity {
+public class WordUseExampleEntity {
     @Id
     @Column(name = "id", nullable = false, updatable = false)
     private UUID id;
@@ -25,9 +24,9 @@ public class ProgressLearnWordEntity {
     @Column(name = "word_id", nullable = false, updatable = false)
     private UUID wordId;
 
-    @Column(name = "learn_date", nullable = false)
-    private LocalDate learnDatetime;
+    @Column(name = "example", nullable = false)
+    private String example;
 
-    @Column(name = "next_learn_date")
-    private LocalDate nextLearnData;
+    @Column(name = "translate", nullable = false)
+    private String translate;
 }
